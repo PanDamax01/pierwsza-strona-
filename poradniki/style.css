@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+    background-color: rgb(214, 214, 214);
+    min-height: 100vh;
+}
+header{                        /* EDYCJA HEDERA */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10000;
+    background: rgb(255 255 255 / 53%);
+    padding-bottom: 10px;
+}
+.logo{ /* zmiana loga */ 
+    margin-top: 12px;                             
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
+}
+.logo img:hover {
+    transform: scale(1.1);  
+}
+.logo a{
+    text-decoration: none;
+    color: #094b65;
+    font-weight: 700;
+    font-size: 2em;
+}.logo a:hover{border-bottom: solid 2px #094b65;}
+nav{
+    margin-right: 10%;
+}
+.active{
+    color: #fff;
+    background-color: #094b65;
+    text-decoration: overline solid;
+}
+nav ul{/* tutaj zmiany*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;                             
+    flex-wrap: wrap;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 20px;
+    background: #fff;
+    border: solid 2px #094b65;
+    margin-top: 12px;
+    transition: 0.3s all ease-in-out;
+}nav ul li:hover{transform: scale(1.2);}
+nav ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #094b65;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+nav ul li a:hover{
+    color: #fff;
+    background: #094b65;
+}                            /*edycja RANK*/
+.rank{
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    padding: 30px;
+}
+.rank h1{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    font-weight: 600;
+    font-family: 'Rancho', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: black;
+}/*edycja zdjec*/
+.image-container{
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+}/*edycja zdjec*/
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 400ms;
+}
+.image-container .image{
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+}
+.image-container .description{
+    height: auto;
+    position: absolute;
+    bottom: 50%;
+    left: 23%;
+    opacity: 0;  
+    transition: all 400ms;
+}
+@media only screen and (max-width: 600px) {
+.image-container .description,
+.image-container .specia{
+    display: none;
+}
+.image-container .image{
+    opacity: 1;
+}
+}
+/* /////media zrobić */
+.image-container .description a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    background: #262c37;
+    color: rgb(245, 245, 245);
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.image-container .image:hover .description{
+    opacity: 1;
+}
+.image-container .image:hover{
+    opacity: 1;
+}
+.image-container .image:hover img{
+    transform: scale(1.2);
+}                     /* edycja sekcji INNE OPCJE*/
+.change h2{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    font-weight: 600;
+    font-family: 'Rancho', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: #262c37;
+}
+
+
+                         /* edycja sekcji INNE newUSERS*/
+.newUsers{
+    width: 100%;
+    height: auto;
+}
+.container-text{
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+}
+h3{
+    font-weight: 600;
+    font-family: 'Mali', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: #262c37;
+}/* guide */
+.content{
+    text-align: justify;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.content h3{
+    color: black;
+    font-size: 2.3em;
+    margin-top: 20px;
+}
+.content p{
+    font-size: 1.3em;
+    padding: 2px 10px;
+    font-weight: 500;
+}
+.content h4{
+    font-size: 1.5em;
+    color: black;
+    margin: 0 10px;
+    font-weight: 700;
+}
+.content span{
+    font-size: 1em;
+    color: green;
+    font-weight: 600;
+    border: dashed 1px green;
+    padding: 2px 6px;
+} /*edycja zdjec*/
+.hello span{
+    color: black;
+    border: none;
+}
+
+/* Seckcja SPELLS */
+.spells{
+    width: 100%;
+    height: 100%;
+}
+.table_section{
+    max-height: 700px;
+    overflow:  auto;
+    margin: 20px 52px;
+}
+@media only screen and (max-width: 600px) {
+    .table_section{
+        max-height: 100%;
+    }}
+table {
+    width: 100%;
+    table-layout: fixed;
+    min-width: 900px;
+    border-collapse: collapse;
+    border: 2px solid #f6f9fc;
+}
+thead th{ /*nagłowek tabeli*/
+    position: sticky;
+    top: 0;
+    color: black;
+    font-size: 1.4em;
+    font-weight: 700;
+    background-color: #f6f9fc;
+}
+th, td{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    text-align: center;
+    
+    font-size: 1.2em;
+    font-weight: 500;
+}
+td img{
+    height: auto;
+    width: 70px;
+    object-fit: contain;
+}
+tr:hover td{
+    background-color: #f6f9fc;
+}
+
+
+
+
+
+
+
+
+
